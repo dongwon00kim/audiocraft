@@ -1,0 +1,38 @@
+{
+    // IntelliSense를 사용하여 가능한 특성에 대해 알아보세요.
+    // 기존 특성에 대한 설명을 보려면 가리킵니다.
+    // 자세한 내용을 보려면 https://go.microsoft.com/fwlink/?linkid=830387을(를) 방문하세요.
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Dora: MusicGen Training",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "/usr/local/bin/dora",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "args": [
+                "run",
+                "solver='musicgen/debug'",
+                "compression_model_checkpoint='//pretrained/facebook/encodec_32khz'",
+                "channels=2",
+                "interleave_stereo_codebooks.use=True",
+                "transformer_lm.n_q=8",
+                "transformer_lm.card=2048",
+                "codebooks_pattern.delay.delays='[0, 0, 1, 1, 2, 2, 3, 3]'",
+            ],
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}",
+                "USER": "root",
+            }
+        },
+        {
+            "name": "Python 디버거: 현재 파일",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal"
+        },
+
+    ]
+}
