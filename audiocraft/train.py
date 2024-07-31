@@ -129,6 +129,12 @@ def init_seed_and_system(cfg):
 
 @hydra_main(config_path='../config', config_name='config', version_base='1.1')
 def main(cfg):
+    logging.basicConfig(
+        format = '%(asctime)s:%(levelname)s:%(message)s',
+        datefmt = '%m/%d/%Y %I:%M:%S %p',
+        level = logging.DEBUG
+    )
+
     init_seed_and_system(cfg)
 
     # Setup logging both to XP specific folder, and to stderr.

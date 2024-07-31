@@ -14,6 +14,7 @@
             "args": [
                 "run",
                 "solver='musicgen/debug'",
+                "conditioner=text2music_flan-t5-large",
                 "compression_model_checkpoint='//pretrained/facebook/encodec_32khz'",
                 "channels=2",
                 "interleave_stereo_codebooks.use=True",

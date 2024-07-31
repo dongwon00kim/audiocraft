@@ -19,7 +19,10 @@ conditioners:
   description:
     model: t5
     t5:
-      name: t5-small
+      # name: t5-small
+      # name: google/flan-t5-base # for korean
+      name: google/flan-t5-large # for korean
+
 
 codebooks_pattern:
   modeling: parallel
